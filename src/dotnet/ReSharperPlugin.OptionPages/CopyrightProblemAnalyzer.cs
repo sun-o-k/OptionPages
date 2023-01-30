@@ -16,9 +16,7 @@ public class CopyrightProblemAnalyzer : ElementProblemAnalyzer<ITreeNode>
             return;
         }
 
-        //todo: move to settings
-        var DesiredCopyright = "// Copyright Dragon's Lake Ent., All Rights Reserved.";
-        if (!element.GetText().Equals(DesiredCopyright))
+        if (!element.GetText().StartsWith(Settings.TempCopyright))
         {
             consumer.AddHighlighting(new CopyrightHighlighting(element));
         }

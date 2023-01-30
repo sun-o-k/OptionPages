@@ -15,7 +15,7 @@ Severity.SUGGESTION)]
 [ConfigurableSeverityHighlighting(SeverityId, CSharpLanguage.Name, OverlapResolve = OverlapResolveKind.WARNING)]
 public class CopyrightHighlighting : IHighlighting
 {
-    private ITreeNode FirstLine { get; set; }
+    public ITreeNode FirstLine { get; set; }
     private const string SeverityId = "AddCopyrightNotice";
 
     public CopyrightHighlighting(ITreeNode firstLine)
